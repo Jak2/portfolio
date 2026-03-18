@@ -1306,6 +1306,21 @@
   </footer>
 
 
+  <!-- Activities Dialog Element -->
+  <dialog id="activitiesDialog"
+    class="glass-card text-white p-7 max-w-xl w-full mx-auto rounded-2xl bg-[#0d1225]/95 border border-white/10 shadow-2xl">
+    <div class="flex justify-between items-center border-b border-white/10 pb-4 mb-4">
+      <h3 class="text-xl font-black text-white">My Current Activities</h3>
+      <button id="closeDialogBtn"
+        class="p-1 text-white/50 hover:text-white transition-colors bg-white/5 hover:bg-white/10 rounded-lg">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="dialogContentArea" class="custom-prose overflow-y-auto max-h-[60vh] pr-2"></div>
+  </dialog>
+
   <!-- ╔══════════════════════════════════════╗ -->
   <!-- ║               SCRIPTS                ║ -->
   <!-- ╚══════════════════════════════════════╝ -->
@@ -1427,20 +1442,6 @@
     }
   </script>
 
-  <!-- Activities Dialog Element -->
-  <dialog id="activitiesDialog"
-    class="glass-card text-white p-7 max-w-xl w-full mx-auto rounded-2xl bg-[#0d1225]/95 border border-white/10 shadow-2xl">
-    <div class="flex justify-between items-center border-b border-white/10 pb-4 mb-4">
-      <h3 class="text-xl font-black text-white">My Current Activities</h3>
-      <button id="closeDialogBtn"
-        class="p-1 text-white/50 hover:text-white transition-colors bg-white/5 hover:bg-white/10 rounded-lg">
-        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-    </div>
-    <div id="dialogContentArea" class="custom-prose overflow-y-auto max-h-[60vh] pr-2"></div>
-  </dialog>
 
   <style>
     @keyframes pulse {
