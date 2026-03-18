@@ -31,6 +31,8 @@
     /* ─── Root & Body ───────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; }
 
+    html { font-size: 13px; } /* Scales down rem units across the entire page */
+
     body {
       background-color: #070b16;
       background-image:
@@ -378,13 +380,23 @@
     /* ─── Tag row spacing ────────────────────────────────── */
     .tag-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
-    /* ─── Job sub-project block ──────────────────────────── */
-    .sub-block {
-      border-left: 2px solid rgba(139,92,246,0.28);
-      padding-left: 1rem;
-      margin-bottom: 1.25rem;
+    /* ─── Metric chip ────────────────────────────────────── */
+    .metric-chip {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 0.875rem;
+      padding: 0.65rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.15rem;
+      min-width: 5rem;
+      transition: border-color 0.2s ease, background 0.2s ease;
     }
-    .sub-block-cyan { border-left-color: rgba(6,182,212,0.28); }
+    .metric-chip:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(139,92,246,0.3);
+    }
 
     @media (max-width: 768px) {
       .tl-wrap { padding-left: 2rem; }
@@ -417,10 +429,18 @@
         <a href="#education"  class="nav-link">Education</a>
       </div>
 
-      <!-- CTA -->
-      <a href="mailto:jayaarunkumartulluri2@gmail.com" class="btn-primary hidden md:inline-block ml-2 text-xs" style="padding:0.5rem 1.25rem">
-        Hire Me
-      </a>
+      <!-- Social Icons -->
+      <div class="hidden md:flex items-center gap-4 ml-2">
+        <a href="mailto:jayaarunkumartulluri2@gmail.com" aria-label="Email" class="text-white/60 hover:text-violet-400 transition-colors">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/jayaarunkumar-tulluri/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-white/60 hover:text-sky-400 transition-colors">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="https://github.com/Jak2" target="_blank" rel="noopener" aria-label="GitHub" class="text-white/60 hover:text-white transition-colors">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+      </div>
 
       <!-- Hamburger -->
       <button id="menuBtn" class="md:hidden ml-auto p-1.5 rounded-xl hover:bg-white/8 transition-colors text-white/60 hover:text-white">
@@ -441,7 +461,11 @@
     <a href="#projects"   class="nav-link block">Projects</a>
     <a href="#education"  class="nav-link block">Education</a>
     <hr class="glow-hr my-2" />
-    <a href="mailto:jayaarunkumartulluri2@gmail.com" class="btn-primary text-center text-sm mt-1">Hire Me</a>
+    <div class="flex items-center justify-center gap-6 mt-3 mb-2">
+      <a href="mailto:jayaarunkumartulluri2@gmail.com" class="text-white/60 hover:text-violet-400"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+      <a href="https://www.linkedin.com/in/jayaarunkumar-tulluri/" target="_blank" rel="noopener" class="text-white/60 hover:text-sky-400"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+      <a href="https://github.com/Jak2" target="_blank" rel="noopener" class="text-white/60 hover:text-white"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+    </div>
   </div>
 
 
@@ -450,10 +474,7 @@
   <!-- ╚══════════════════════════════════════╝ -->
   <section id="hero" class="relative z-10 min-h-screen flex flex-col items-center justify-center text-center px-4 pt-24 pb-16">
 
-    <div class="section-label" style="animation: fadeUp 0.6s ease forwards;">
-      <span style="width:7px;height:7px;border-radius:50%;background:#a78bfa;display:inline-block;animation:pulse 2s infinite"></span>
-      Open to opportunities
-    </div>
+
 
     <h1 class="font-black leading-none mt-2 mb-3" style="font-size: clamp(2.8rem, 7vw, 5.5rem); letter-spacing: -0.035em;">
       <span class="name-animated block">Jaya Arun Kumar</span>
@@ -461,36 +482,18 @@
     </h1>
 
     <p class="text-white/55 font-light mb-1.5 max-w-lg" style="font-size:clamp(1rem,2.5vw,1.2rem);">
-      Senior Systems Engineer
+      Senior Systems Engineer with 5+ years of experience
     </p>
     <p class="font-mono text-xs text-white/35 mb-10 max-w-sm tracking-wider">
       Python · AI / LLM · 5G-6G Automation · Agentic AI · Cloud Native
     </p>
 
     <div class="flex flex-wrap gap-3 justify-center mb-14">
-      <a href="#experience" class="btn-primary">View Experience</a>
-      <a href="mailto:jayaarunkumartulluri2@gmail.com" class="btn-secondary">Get In Touch</a>
+      <a href="#experience" class="btn-primary">My current activities</a>
+      <a href="mailto:jayaarunkumartulluri2@gmail.com" class="btn-secondary">Resume</a>
     </div>
 
-    <!-- Stats row -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-xl w-full">
-      <div class="stat-card">
-        <div class="text-2xl font-black text-gd">5+</div>
-        <div class="text-xs text-white/40 mt-1 font-medium">Years Exp.</div>
-      </div>
-      <div class="stat-card">
-        <div class="text-2xl font-black text-gd">70%</div>
-        <div class="text-xs text-white/40 mt-1 font-medium">Auto-Resolution</div>
-      </div>
-      <div class="stat-card">
-        <div class="text-2xl font-black text-gd">55%</div>
-        <div class="text-xs text-white/40 mt-1 font-medium">MTTR Reduced</div>
-      </div>
-      <div class="stat-card">
-        <div class="text-2xl font-black text-gd">6+</div>
-        <div class="text-xs text-white/40 mt-1 font-medium">OSS Projects</div>
-      </div>
-    </div>
+
 
     <!-- Scroll hint -->
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/25 text-xs font-mono">
@@ -668,37 +671,46 @@
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="glass-card p-7">
-            <div class="flex flex-wrap items-start justify-between gap-3 mb-5">
+            <div class="flex flex-wrap items-start justify-between gap-3 mb-1">
               <div>
                 <h3 class="font-black text-white text-lg leading-tight">Infinite Computer Solutions</h3>
                 <p class="text-violet-400 text-sm font-medium mt-0.5">Python Dev, Automation Tester · Nokia-Ext</p>
               </div>
-              <span class="neu-tag text-white/50 text-xs" style="white-space:nowrap">June 2025 – Present</span>
-            </div>
-
-            <div class="space-y-4">
-              <div class="sub-block">
-                <h4 class="text-xs font-bold text-white/80 uppercase tracking-wider mb-2">Agentic AI Module — 6G Test Orchestration</h4>
-                <p class="text-sm text-white/52 leading-relaxed">
-                  Building a modular agentic AI system that autonomously orchestrates end-to-end test scenarios across distributed infrastructure, self-optimizing based on real-time telemetry signals from multi-vendor service environments.
-                </p>
-              </div>
-
-              <div class="sub-block sub-block-cyan">
-                <h4 class="text-xs font-bold text-white/80 uppercase tracking-wider mb-3">Lightweight Packet Analysis Library — 5G Filter Library</h4>
-                <ul class="space-y-2 text-sm text-white/52">
-                  <li class="flex gap-2.5"><span class="text-violet-400 flex-shrink-0 mt-0.5">▸</span>Built Python packet-analysis library reducing manual log analysis from <strong class="text-white/80">hours to seconds</strong> across distributed microservice environments.</li>
-                  <li class="flex gap-2.5"><span class="text-violet-400 flex-shrink-0 mt-0.5">▸</span>AI-assisted remediation engine with Redis caching achieving <strong class="text-violet-300">70% auto-resolution</strong> of routine failures, reducing MTTR by 55% — cited in three internal audits.</li>
-                  <li class="flex gap-2.5"><span class="text-violet-400 flex-shrink-0 mt-0.5">▸</span>Led cross-team RCA revealing <strong class="text-white/80">60% of downtime</strong> from undetected silent failures; delivered full detection-to-remediation pipeline in <strong class="text-white/80">2 weeks</strong>.</li>
-                </ul>
+              <div class="flex flex-col items-end gap-1.5">
+                <span class="neu-tag text-white/50 text-xs" style="white-space:nowrap">June 2025 – Present</span>
+                <span class="font-mono text-xs text-white/30">~1 yr</span>
               </div>
             </div>
 
-            <div class="mt-5 tag-row">
+            <p class="text-sm text-white/55 leading-relaxed mt-4 mb-6">
+              Engineering autonomous AI systems and Python automation tooling for 5G/6G testbed environments at Nokia, focusing on intelligent failure detection, remediation pipelines, and agentic orchestration of distributed test infrastructure.
+            </p>
+
+            <div class="flex flex-wrap gap-3 mb-6">
+              <div class="metric-chip">
+                <span class="text-lg font-black text-gd">70%</span>
+                <span class="text-xs text-white/38 text-center">Auto-resolution</span>
+              </div>
+              <div class="metric-chip">
+                <span class="text-lg font-black text-gd">55%</span>
+                <span class="text-xs text-white/38 text-center">MTTR reduction</span>
+              </div>
+              <div class="metric-chip">
+                <span class="text-lg font-black text-gd">60%</span>
+                <span class="text-xs text-white/38 text-center">Downtime sourced</span>
+              </div>
+              <div class="metric-chip">
+                <span class="text-lg font-black text-gd">3×</span>
+                <span class="text-xs text-white/38 text-center">Internal audits</span>
+              </div>
+            </div>
+
+            <div class="tag-row">
               <span class="neu-tag text-violet-300">Python</span>
-              <span class="neu-tag text-violet-300">Redis</span>
-              <span class="neu-tag text-violet-300">Packet Analysis</span>
               <span class="neu-tag text-violet-300">Agentic AI</span>
+              <span class="neu-tag text-violet-300">Redis</span>
+              <span class="neu-tag text-violet-300">5G / 6G</span>
+              <span class="neu-tag text-violet-300">LLM</span>
             </div>
           </div>
         </div>
@@ -707,49 +719,47 @@
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="glass-card p-7">
-            <div class="flex flex-wrap items-start justify-between gap-3 mb-5">
+            <div class="flex flex-wrap items-start justify-between gap-3 mb-1">
               <div>
                 <h3 class="font-black text-white text-lg leading-tight">Nokia Networks</h3>
                 <p class="text-violet-400 text-sm font-medium mt-0.5">Python Dev, Automation Tester</p>
               </div>
-              <span class="neu-tag text-white/50 text-xs" style="white-space:nowrap">Aug 2022 – June 2025</span>
-            </div>
-
-            <div class="space-y-4">
-              <div class="sub-block">
-                <h4 class="text-xs font-bold text-white/80 uppercase tracking-wider mb-3">LOT3 CCTF TDG Germany — UDM/AUSF Testing 5G</h4>
-                <ul class="space-y-2 text-sm text-white/52">
-                  <li class="flex gap-2.5"><span class="text-violet-400 flex-shrink-0 mt-0.5">▸</span>End-to-end functional testing across distributed microservice APIs in live production-equivalent environments.</li>
-                  <li class="flex gap-2.5"><span class="text-violet-400 flex-shrink-0 mt-0.5">▸</span>Managed <strong class="text-white/80">Kubernetes pod health</strong> with regular log analysis and debugging for UDM/AUSF functions.</li>
-                  <li class="flex gap-2.5"><span class="text-violet-400 flex-shrink-0 mt-0.5">▸</span>Designed <strong class="text-white/80">real-time K8s health dashboard</strong> for monitoring pod availability, service health, and resource utilization.</li>
-                </ul>
-              </div>
-
-              <div class="sub-block sub-block-cyan">
-                <h4 class="text-xs font-bold text-white/80 uppercase tracking-wider mb-3">NFTRACE — REST Based Network Function Tracing Tool</h4>
-                <ul class="space-y-2 text-sm text-white/52">
-                  <li class="flex gap-2.5"><span class="text-sky-400 flex-shrink-0 mt-0.5">▸</span>Architected distributed REST tracing platform, cutting pipeline validation time by <strong class="text-sky-300">50%</strong> across CD workflows.</li>
-                  <li class="flex gap-2.5"><span class="text-sky-400 flex-shrink-0 mt-0.5">▸</span>Full server stack: FastAPI + Redis session caching + SQLite persistence for parallel execution isolation.</li>
-                  <li class="flex gap-2.5"><span class="text-sky-400 flex-shrink-0 mt-0.5">▸</span>Client-side SDK for multi-worker parallel processing via xmlrpc with result aggregation and GUI reporting.</li>
-                </ul>
-              </div>
-
-              <div class="sub-block">
-                <h4 class="text-xs font-bold text-white/80 uppercase tracking-wider mb-2">Self-Service Robot Keyword Generator</h4>
-                <p class="text-sm text-white/52 leading-relaxed">
-                  Built Streamlit + FastAPI internal tool auto-generating Robot Framework keywords for 5G procedures. Grew organically to <strong class="text-white/80">50+ weekly generations</strong>, freeing seniors for complex interoperability tests.
-                </p>
+              <div class="flex flex-col items-end gap-1.5">
+                <span class="neu-tag text-white/50 text-xs" style="white-space:nowrap">Aug 2022 – June 2025</span>
+                <span class="font-mono text-xs text-white/30">~3 yrs</span>
               </div>
             </div>
 
-            <div class="mt-5 tag-row">
+            <p class="text-sm text-white/55 leading-relaxed mt-4 mb-6">
+              Delivered end-to-end automation, testing infrastructure, and internal tooling for 5G core network functions across distributed microservice environments, working directly with an international client in Germany.
+            </p>
+
+            <div class="flex flex-wrap gap-3 mb-6">
+              <div class="metric-chip">
+                <span class="text-lg font-black text-gd">50%</span>
+                <span class="text-xs text-white/38 text-center">Pipeline time cut</span>
+              </div>
+              <div class="metric-chip">
+                <span class="text-lg font-black text-gd">50+</span>
+                <span class="text-xs text-white/38 text-center">Weekly tool users</span>
+              </div>
+              <div class="metric-chip">
+                <span class="text-lg font-black text-gd">25%</span>
+                <span class="text-xs text-white/38 text-center">Code quality gain</span>
+              </div>
+              <div class="metric-chip">
+                <span class="text-lg font-black text-gd">3 yrs</span>
+                <span class="text-xs text-white/38 text-center">Tenure</span>
+              </div>
+            </div>
+
+            <div class="tag-row">
               <span class="neu-tag text-sky-300">FastAPI</span>
               <span class="neu-tag text-sky-300">Kubernetes</span>
               <span class="neu-tag text-sky-300">Redis</span>
               <span class="neu-tag text-sky-300">Docker</span>
+              <span class="neu-tag text-sky-300">Robot Framework</span>
               <span class="neu-tag text-sky-300">Celery</span>
-              <span class="neu-tag text-sky-300">SQLite</span>
-              <span class="neu-tag text-sky-300">Streamlit</span>
             </div>
           </div>
         </div>
@@ -758,19 +768,33 @@
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="glass-card p-7">
-            <div class="flex flex-wrap items-start justify-between gap-3 mb-4">
+            <div class="flex flex-wrap items-start justify-between gap-3 mb-1">
               <div>
                 <h3 class="font-black text-white text-lg leading-tight">Abjayon Pvt Ltd</h3>
                 <p class="text-violet-400 text-sm font-medium mt-0.5">Node.js Backend &amp; AWS Developer</p>
               </div>
-              <span class="neu-tag text-white/50 text-xs" style="white-space:nowrap">Jan 2022 – July 2022</span>
+              <div class="flex flex-col items-end gap-1.5">
+                <span class="neu-tag text-white/50 text-xs" style="white-space:nowrap">Jan 2022 – July 2022</span>
+                <span class="font-mono text-xs text-white/30">7 mos</span>
+              </div>
             </div>
-            <ul class="space-y-2 text-sm text-white/52">
-              <li class="flex gap-2.5"><span class="text-violet-400 flex-shrink-0 mt-0.5">▸</span>AWS AppSync &amp; AppFlow integration improving data retrieval efficiency by <strong class="text-white/80">15%</strong>.</li>
-              <li class="flex gap-2.5"><span class="text-violet-400 flex-shrink-0 mt-0.5">▸</span>Developed and optimized GraphQL API queries and REST APIs with Axios and FastAPI.</li>
-              <li class="flex gap-2.5"><span class="text-violet-400 flex-shrink-0 mt-0.5">▸</span>Managed IAM roles for secure resource access and compliance enforcement.</li>
-            </ul>
-            <div class="mt-5 tag-row">
+
+            <p class="text-sm text-white/55 leading-relaxed mt-4 mb-6">
+              Built and optimized backend APIs and AWS cloud integrations for enterprise applications, with ownership of GraphQL services, REST endpoints, and IAM security configuration.
+            </p>
+
+            <div class="flex flex-wrap gap-3 mb-6">
+              <div class="metric-chip">
+                <span class="text-lg font-black text-gd">15%</span>
+                <span class="text-xs text-white/38 text-center">Data retrieval gain</span>
+              </div>
+              <div class="metric-chip">
+                <span class="text-lg font-black text-gd">2</span>
+                <span class="text-xs text-white/38 text-center">AWS services owned</span>
+              </div>
+            </div>
+
+            <div class="tag-row">
               <span class="neu-tag text-violet-300">AWS</span>
               <span class="neu-tag text-violet-300">GraphQL</span>
               <span class="neu-tag text-violet-300">Node.js</span>
@@ -784,18 +808,33 @@
         <div class="tl-item reveal">
           <div class="tl-dot"></div>
           <div class="glass-card p-7">
-            <div class="flex flex-wrap items-start justify-between gap-3 mb-4">
+            <div class="flex flex-wrap items-start justify-between gap-3 mb-1">
               <div>
                 <h3 class="font-black text-white text-lg leading-tight">Lakshya Space</h3>
                 <p class="text-violet-400 text-sm font-medium mt-0.5">Python &amp; Web Developer</p>
               </div>
-              <span class="neu-tag text-white/50 text-xs" style="white-space:nowrap">Mar 2021 – Jan 2022</span>
+              <div class="flex flex-col items-end gap-1.5">
+                <span class="neu-tag text-white/50 text-xs" style="white-space:nowrap">Mar 2021 – Jan 2022</span>
+                <span class="font-mono text-xs text-white/30">10 mos</span>
+              </div>
             </div>
-            <ul class="space-y-2 text-sm text-white/52">
-              <li class="flex gap-2.5"><span class="text-violet-400 flex-shrink-0 mt-0.5">▸</span>Mentored and supervised a team of <strong class="text-white/80">19 interns</strong> in web development.</li>
-              <li class="flex gap-2.5"><span class="text-violet-400 flex-shrink-0 mt-0.5">▸</span>Developed Python firmware for embedded sensor systems in resource-constrained hardware environments.</li>
-              <li class="flex gap-2.5"><span class="text-violet-400 flex-shrink-0 mt-0.5">▸</span>Independently developed the portfolio website and supported other web development projects.</li>
-            </ul>
+
+            <p class="text-sm text-white/55 leading-relaxed mt-4 mb-6">
+              Developed Python firmware for embedded sensor systems and led web development projects, while mentoring and supervising a large team of junior interns.
+            </p>
+
+            <div class="flex flex-wrap gap-3 mb-6">
+              <div class="metric-chip">
+                <span class="text-lg font-black text-gd">19</span>
+                <span class="text-xs text-white/38 text-center">Interns mentored</span>
+              </div>
+            </div>
+
+            <div class="tag-row">
+              <span class="neu-tag text-violet-300">Python</span>
+              <span class="neu-tag text-violet-300">Embedded Systems</span>
+              <span class="neu-tag text-violet-300">Web Dev</span>
+            </div>
           </div>
         </div>
 

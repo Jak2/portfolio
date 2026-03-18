@@ -1,83 +1,59 @@
 # Jaya Arun Kumar Tulluri - Personal Portfolio
 
-A fast, responsive, and minimalist personal portfolio website built with Astro and Tailwind CSS. The portfolio showcases professional experience, core competencies, and personal projects, driven entirely by Markdown content for easy maintenance.
+A sleek, animated, and minimalist personal portfolio leveraging modern web design principles like Neo-Brutalism, Glassmorphism, and Neumorphism. This portfolio showcases professional experience, core competencies, and personal projects in a highly performant, single-file HTML architecture.
 
-## Features
+## Architecture
 
-- **Markdown-Driven Content**: Easily update work experience, skills, and projects by editing a single markdown file (`src/data/portfolio.md`).
-- **Dynamic Theming**: Supports multiple color themes (Amber, Sage, Slate, Rose) and a built-in Dark/Light mode toggle for personalized viewing.
-- **Responsive Layout**: Mobile-friendly design featuring an off-canvas sidebar navigation and smooth scrolling for a seamless user experience.
-- **High Performance**: Built with Astro for optimized asset delivery and zero-JS-by-default architecture.
+This project originally started as an Astro + Tailwind documentation site but has been refactored entirely into a **single, dependency-free HTML file (`index.html`)** for maximum portability, simplicity, and performance. 
+
+- **Zero-Build Pipeline:** No Node.js build steps or complex bundlers required for production.
+- **Embedded CSS & Scripts:** All Tailwind directives, custom CSS (glassmorphism/neumorphism), and lightweight scroll animations are contained directly within the file.
+- **Offline Capable:** Drop the file into any browser and it works immediately.
+
+## Design Highlights
+
+- **Glassmorphism:** Elegant frosted glass layers (`.glass-card`, `.glass-nav`) with subtle ambient blur over an animated, deep-space gradient background.
+- **Neumorphism:** Tactical use of inset and drop shadows (`.neu-tag`) for skill pills, complementing the dark aesthetic.
+- **Responsive Layout:** A fixed navigation bar on desktop that transitions to a sleek, glassmorphism off-canvas menu for mobile viewing.
+- **Micro-interactions:** Custom hover effects, CSS keyframe gradient text animations, and automated scroll reveal states (`IntersectionObserver`).
 
 ## Tech Stack
 
-- **Framework**: [Astro](https://astro.build/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Language**: TypeScript / HTML
-
-## System Requirements
-
-- Node.js (v18.0.0 or higher recommended)
-- npm (or any preferred Node package manager)
+- **HTML5:** Semantic architecture
+- **CSS3 / Tailwind CSS (CDN):** Core styling engine with custom variants
+- **JavaScript (Vanilla):** Scroll observers and mobile menu toggles
 
 ## Getting Started
 
-Follow these steps to set up and run the project locally.
+Because the project has been simplified to its purest form, there are no dependencies to install.
 
-### 1. Installation
+### Running Locally
 
-Clone the repository and install the dependencies:
+**Method 1: Direct File Access**
+Double-click `index.html` to open it in any modern browser.
 
+**Method 2: Live Server (Recommended for development)**
+If you are using VS Code, use the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension to serve the file and get hot-reloading on save.
+
+**Method 3: npm serve**
+If you have Node installed, you can still use:
 ```bash
-# Install dependencies
-npm install
+npm install -g serve
+serve .
 ```
 
-### 2. Development
+### Deployment
 
-Start the local development server:
+To deploy, simply upload the `index.html` wrapper to any static hosting provider.
+- **Netlify Drop:** Drag and drop the folder into Netlify.
+- **GitHub Pages:** Select your main branch root for deployment.
+- **Vercel / Cloudflare Pages:** Connect repository and deploy instantly with no build command.
 
-```bash
-# Start the development server
-npm run dev
-```
+## Customization
 
-The application will be available at `http://localhost:4321`.
-
-### 3. Build for Production
-
-To create a production-ready build:
-
-```bash
-# Build the project
-npm run build
-```
-
-This will generate the static files in the `dist/` directory, ready to be deployed to your preferred hosting provider.
-
-## Project Structure
-
-```text
-portfolio/
-├── src/
-│   ├── data/
-│   │   └── portfolio.md     # Main portfolio content
-│   ├── layouts/
-│   │   └── Layout.astro     # Global HTML shell and layout
-│   ├── pages/
-│   │   └── index.astro      # Homepage layout and UI logic
-│   └── styles/
-│       └── global.css       # Global styles and Tailwind base
-├── public/                  # Static assets (images, fonts)
-├── astro.config.mjs         # Astro configuration
-└── tailwind.config.mjs      # Tailwind CSS configuration
-```
-
-## Usage & Customization
-
-- **Update Content**: Edit `src/data/portfolio.md` to update your resume, skills, and projects.
-- **Adjust Styling**: Modify `src/styles/global.css` for custom CSS variables or tweak Tailwind utility classes throughout the `.astro` components.
-- **Change Themes**: The theme switching logic is handled in `src/pages/index.astro`. You can add or modify themes by updating the data attributes and CSS variables.
+To edit the portfolio, simply open `index.html`. 
+- **Personal Details:** Search for standard IDs like `#hero`, `#about`, `#experience` to modify text.
+- **Styling:** Top `<style>` block contains all custom CSS classes and animations.
 
 ## Author
 
