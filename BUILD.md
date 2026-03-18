@@ -201,6 +201,18 @@ Alternating violet/cyan left-borders let the eye quickly distinguish sub-project
 
 ---
 
+### 11. Theme Switcher (Light / Dark)
+
+Though the original design was strictly dark-mode with hard-coded `rgba` values, a DOM-level CSS override for `.theme-light` was implemented. This injects white backgrounds (`#f8fafc`) and recalculates the transparency values for the `.glass-card` elements to ensure the UI remains premium in both color schemes, without requiring a complete rewrite of the Tailwind utility classes.
+
+---
+
+### 12. Dynamic Markdown Fetching
+
+To maintain an easy editing experience for current activities while keeping the single-file structure, a lightweight `<dialog>` modal was added. When opened, it uses the browser's native `fetch()` API to load `MyCurrentActivities.md` and a CDN script (`marked.js`) to render it. This avoids bloating the HTML and allows updating recent activities simply by saving a markdown file in the root directory.
+
+---
+
 ## File Structure (final)
 
 ```
@@ -218,7 +230,7 @@ No `node_modules`. No build step. No bundler. One file.
 ## How to run
 
 **Option A — Open directly:**
-Double-click `index.html` in your file explorer. Works offline.
+Double-click `index.html` in your file explorer. Works offline. *(Note: The "My current activities" modal will fail to load its markdown file in this mode due to browser CORS policies on the `file://` protocol).*
 
 **Option B — Local dev server (for live reload with VS Code):**
 Install the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension → right-click `index.html` → Open with Live Server.
