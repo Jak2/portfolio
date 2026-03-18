@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "npx serve . -p 3000",
     "start": "npx serve . -p 3000",
-    "build": "echo 'No build step — pure static HTML'",
-    "preview": "npx serve . -p 4321"
+    "build": "mkdir -p dist && cp index.html MyCurrentActivities.md dist/ || true"
   },
   "dependencies": {}
 }
