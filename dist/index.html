@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en" data-theme="amber" data-mode="light"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Portfolio of Jaya Arun Kumar Tulluri — Senior Systems Engineer, AI/LLM specialist, 5G/6G automation expert."><title>Jaya Arun Kumar · Portfolio</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Grotesk:wght@300;400;500;600&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/index.cCcvsxB9.css"><script type="module">const c=document.documentElement;function h(e){c.setAttribute("data-theme",e),localStorage.setItem("theme",e),document.querySelectorAll(".theme-dot").forEach(t=>{t.classList.toggle("active",t.dataset.t===e)})}document.querySelectorAll(".theme-dot").forEach(e=>{e.addEventListener("click",()=>{h(e.dataset.t)})});const u=c.getAttribute("data-theme")||"amber";document.querySelectorAll(".theme-dot").forEach(e=>{e.classList.toggle("active",e.dataset.t===u)});const l=document.getElementById("darkToggle");function m(){const e=c.getAttribute("data-mode")==="dark";l.textContent=e?"○ Light":"◐ Dark"}m();l.addEventListener("click",()=>{const t=c.getAttribute("data-mode")==="dark"?"light":"dark";c.setAttribute("data-mode",t),localStorage.setItem("mode",t),m()});document.querySelectorAll(".nav-section").forEach(e=>{const t=e.querySelector(".nav-h2[data-target]");t&&t.addEventListener("click",()=>{const s=e.classList.toggle("open");t.setAttribute("aria-expanded",String(s));const n=t.dataset.target,o=document.getElementById(n);o&&o.scrollIntoView({behavior:"smooth",block:"start"})})});document.querySelectorAll(".nav-h3").forEach(e=>{e.addEventListener("click",t=>{t.preventDefault();const n=e.getAttribute("href").slice(1),o=document.getElementById(n);o&&o.scrollIntoView({behavior:"smooth",block:"start"}),window.innerWidth<=768&&d()})});const g=document.querySelectorAll(".nav-h2[href], .nav-h3");function f(e){g.forEach(t=>{const n=t.getAttribute("href")===`#${e}`;t.classList.toggle("active",n),n&&t.classList.contains("nav-h3")&&t.closest(".nav-section")?.classList.add("open")})}const v=document.querySelectorAll(".prose h2, .prose h3"),E=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&f(t.target.id)})},{rootMargin:"-60px 0px -60% 0px",threshold:0});v.forEach(e=>E.observe(e));const b=document.getElementById("menuBtn"),a=document.getElementById("sidebar"),r=document.getElementById("sidebarOverlay");function p(){a.classList.add("open"),r.classList.add("open")}function d(){a.classList.remove("open"),r.classList.remove("open")}b.addEventListener("click",()=>{a.classList.contains("open")?d():p()});r.addEventListener("click",d);const i=document.getElementById("prose-content");if(i){const e=i.querySelector("h1");if(e){const t=document.createElement("div");t.className="hero-card";const s=[];let n=e;for(;n;){const o=n.nextSibling;if(n.tagName==="HR"||n.tagName==="H2")break;s.push(n),n=o}e.parentNode?.insertBefore(t,e),s.forEach(o=>t.appendChild(o))}}
+</script></head> <body>   <header class="topbar"> <div style="display:flex;align-items:center;gap:0.75rem;"> <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button> <span class="topbar-name">JAK<span>.</span>T</span> </div> <div class="topbar-controls"> <!-- 4 theme dots --> <button class="theme-dot active" data-t="amber" aria-label="Amber theme" title="Amber"></button> <button class="theme-dot" data-t="sage" aria-label="Sage theme" title="Sage"></button> <button class="theme-dot" data-t="slate" aria-label="Slate theme" title="Slate"></button> <button class="theme-dot" data-t="rose" aria-label="Rose theme" title="Rose"></button> <!-- Dark / light toggle --> <button class="dark-toggle" id="darkToggle" aria-label="Toggle dark mode">◐ Dark</button> </div> </header>  <div class="sidebar-overlay" id="sidebarOverlay"></div>  <nav class="sidebar" id="sidebar" aria-label="Page navigation"> <div class="sidebar-label">Navigation</div> <div class="nav-section" data-slug="professional-summary"> <a class="nav-h2" href="#professional-summary" style="text-decoration:none;"> Professional Summary <span></span> </a> </div><div class="nav-section" data-slug="core-competencies">  <button class="nav-h2" data-target="core-competencies" aria-expanded="false"> Core Competencies <span class="nav-arrow">▶</span> </button> <div class="nav-children" role="list"> <a class="nav-h3" href="#ai--llm-ops" role="listitem"> AI &amp; LLM Ops </a><a class="nav-h3" href="#backend--automation" role="listitem"> Backend &amp; Automation </a><a class="nav-h3" href="#data--infrastructure" role="listitem"> Data &amp; Infrastructure </a><a class="nav-h3" href="#frontend--tools" role="listitem"> Frontend &amp; Tools </a> </div>  </div><div class="nav-section" data-slug="work-experience">  <button class="nav-h2" data-target="work-experience" aria-expanded="false"> Work Experience <span class="nav-arrow">▶</span> </button> <div class="nav-children" role="list"> <a class="nav-h3" href="#infinite-computer-solutions--nokia-ext" role="listitem"> Infinite Computer Solutions — Nokia Ext </a><a class="nav-h3" href="#nokia-networks" role="listitem"> Nokia Networks </a><a class="nav-h3" href="#abjayon-pvt-ltd" role="listitem"> Abjayon Pvt Ltd </a><a class="nav-h3" href="#lakshya-space" role="listitem"> Lakshya Space </a> </div>  </div><div class="nav-section" data-slug="personal-projects">  <button class="nav-h2" data-target="personal-projects" aria-expanded="false"> Personal Projects <span class="nav-arrow">▶</span> </button> <div class="nav-children" role="list"> <a class="nav-h3" href="#employee-management-system" role="listitem"> Employee Management System </a><a class="nav-h3" href="#financial-statement-parser" role="listitem"> Financial Statement Parser </a><a class="nav-h3" href="#llm-eval-framework" role="listitem"> LLM Eval Framework </a><a class="nav-h3" href="#llm-bias-fairness-auditor" role="listitem"> LLM Bias Fairness Auditor </a><a class="nav-h3" href="#prompt-regression-suite" role="listitem"> Prompt Regression Suite </a><a class="nav-h3" href="#blog-engine" role="listitem"> Blog Engine </a> </div>  </div><div class="nav-section" data-slug="education">  <button class="nav-h2" data-target="education" aria-expanded="false"> Education <span class="nav-arrow">▶</span> </button> <div class="nav-children" role="list"> <a class="nav-h3" href="#vasavi-college-of-engineering" role="listitem"> Vasavi College of Engineering </a> </div>  </div><div class="nav-section" data-slug="extra-curricular">  <button class="nav-h2" data-target="extra-curricular" aria-expanded="false"> Extra Curricular <span class="nav-arrow">▶</span> </button> <div class="nav-children" role="list"> <a class="nav-h3" href="#graphic-design--gans" role="listitem"> Graphic Design &amp; GANs </a> </div>  </div> </nav>  <main class="main-content"> <div class="prose" id="prose-content"> <h1 id="jaya-arun-kumar-tulluri">Jaya Arun Kumar Tulluri</h1>
+<p><strong>Senior Systems Engineer</strong> · Python · AI/LLM · 5G/6G Automation</p>
+<p>📧 <a href="mailto:jayaarunkumartulluri2@gmail.com">jayaarunkumartulluri2@gmail.com</a> · 📞 80086 23789 · <a href="https://linkedin.com/in/jayaarunkumar-tulluri">LinkedIn →</a></p>
+<hr>
+<h2 id="professional-summary">Professional Summary</h2>
+<p>Senior Systems Engineer with <strong>5+ years</strong> of experience engineering high-performance automation for complex <strong>5G/6G testbeds</strong>. Specializing in the architectural transition from manual testing to <strong>autonomous, self-optimizing environments</strong> using Python, LLM, Agentic AI, and Cloud-Native (K8s/Docker) stacks.</p>
+<p>Proven track record in building internal infrastructure and <strong>AI-assisted remediation engines</strong> that achieve <strong>70% auto-resolution</strong> of failures and reduce <strong>MTTR by 55%</strong>. Expert in bridging the gap between low-level signaling protocol analysis and high-level AI delivery via FastAPI, Redis, and LLM orchestration.</p>
+<hr>
+<h2 id="core-competencies">Core Competencies</h2>
+<h3 id="ai--llm-ops">AI &#x26; LLM Ops</h3>
+<p>Agentic AI · LangChain · LLM Evaluation (Hallucination/Bias detection) · Ollama · QWEN 2.5 · Google Gemini · Claude Code · RAG workflows</p>
+<h3 id="backend--automation">Backend &#x26; Automation</h3>
+<p>Python · FastAPI · Robot Framework · Node.js · Celery · Multiprocessing · AsyncIO · GraphQL · REST · XML-RPC</p>
+<h3 id="data--infrastructure">Data &#x26; Infrastructure</h3>
+<p>Kubernetes · Docker · AWS (AppSync, AppFlow, IAM) · Redis · PostgreSQL · MongoDB · SQLite · SQLAlchemy · Pydantic</p>
+<h3 id="frontend--tools">Frontend &#x26; Tools</h3>
+<p>Streamlit · React + Vite · Astro · Tailwind CSS · Figma · Git · GitLab · JIRA</p>
+<hr>
+<h2 id="work-experience">Work Experience</h2>
+<h3 id="infinite-computer-solutions--nokia-ext">Infinite Computer Solutions — Nokia Ext</h3>
+<p><strong>Python Dev, Automation Tester</strong> · June 2025 – Present</p>
+<p><strong>Agentic AI Module for Autonomous Test Orchestration in 6G Testbeds</strong></p>
+<p>Building a modular agentic AI system that autonomously orchestrates end-to-end test scenarios across distributed infrastructure, self-optimizing based on real-time telemetry signals from multi-vendor service environments.</p>
+<p><strong>LOT3 CCTF TDG Germany — UDM/AUSF Testing 5G</strong></p>
+<p>Continued the project and its activities after shifting to Infinite.</p>
+<p><strong>Lightweight Packet Analysis Library — Filter Library for 5G</strong></p>
+<ul>
+<li>Built a Python packet-analysis library for automated failure detection and intelligent remediation, applying targeted display filters and real-time monitoring to reduce manual log analysis time from <strong>hours to seconds</strong> across distributed microservice environments.</li>
+<li>Engineered an <strong>AI-assisted remediation engine</strong> with Redis caching that serves context-aware fix suggestions, achieving <strong>70% auto-resolution</strong> of routine failures without human escalation, reducing MTTR by 55%, and earning adoption by operations teams with citations in three internal audits.</li>
+<li>Led cross-team root-cause analysis revealing that <strong>60% of system downtime</strong> originated from undetected silent failures in distributed services; delivered the full detection-to-remediation pipeline in <strong>2 weeks</strong>, saving hundreds of engineering hours annually.</li>
+</ul>
+<p><code>Python</code> <code>Packet Analysis Library</code> <code>Redis</code></p>
+<hr>
+<h3 id="nokia-networks">Nokia Networks</h3>
+<p><strong>Python Dev, Automation Tester</strong> · Aug 2022 – June 2025</p>
+<p><strong>LOT3 CCTF TDG Germany — UDM/AUSF Testing 5G</strong></p>
+<ul>
+<li>Executed end-to-end functional testing across distributed microservice APIs, analyzing R&#x26;D specifications to validate complex multi-step transaction flows and subscriber lifecycle scenarios in live production-equivalent environments.</li>
+<li>Collaborated with client and deployment teams to execute assigned activities within <strong>Agile sprints</strong>, ensuring on-time completion of weekly project deliveries.</li>
+<li>Managed Kubernetes (K8s) pod health and availability by performing regular health checks and log analysis to debug microservice behavior, ensuring stable deployment of UDM/AUSF functions.</li>
+<li>Designed a <strong>real-time Kubernetes health dashboard</strong> for monitoring pod availability, service health, and resource utilization — giving clients live visibility into cluster state and reducing escalation response time.</li>
+<li>Managed high-pressure delivery timelines by providing dedicated technical support during non-office hours, troubleshooting blockers to maintain project velocity.</li>
+</ul>
+<p><strong>TCOE — NFTRACE: REST Based Network Function Tracing Tool</strong></p>
+<ul>
+<li>Architected and implemented a <strong>distributed REST-based tracing platform</strong> for enterprise test automation, supporting real-time and scheduled batch execution modes, cutting pipeline validation time by <strong>50%</strong> across Continuous Delivery workflows.</li>
+<li>Built the full server-side stack in Python: FastAPI REST endpoints for lifecycle management (start/stop/merge/validate), Redis-backed session caching for parallel execution isolation, and SQLite persistence for node state and execution history.</li>
+<li>Built client-side SDK integration with session management for <strong>multi-worker parallel processing</strong> via xmlrpc, enabling concurrent execution across distributed workers with result aggregation and GUI-level reporting.</li>
+<li>Handled architecture for trace collection from network nodes/third-party servers, post-processing with filters/dissection, and scenario-based validations for protocols like <strong>SIP and Diameter</strong>.</li>
+</ul>
+<p><code>Python</code> <code>FastAPI</code> <code>Docker</code> <code>Redis</code> <code>SQLite</code> <code>xmlrpc</code> <code>Multiprocessing</code> <code>Celery</code> <code>Git</code> <code>Jira</code></p>
+<p><strong>Self-Service Robot Keyword Generator</strong></p>
+<ul>
+<li>Built an internal web tool (Streamlit + FastAPI) where testers input high-level test descriptions and get ready-to-use Robot Framework keywords for common 5G procedures, reducing keyword creation time from <strong>hours to minutes</strong>.</li>
+<li>Usage exploded organically to <strong>50+ weekly generations</strong>, freeing seniors for complex scenarios like multi-vendor interoperability tests, and earning shoutouts in two sprint retrospectives.</li>
+</ul>
+<p><code>Python</code> <code>Streamlit</code> <code>FastAPI</code> <code>Robot Framework</code></p>
+<hr>
+<h3 id="abjayon-pvt-ltd">Abjayon Pvt Ltd</h3>
+<p><strong>Node.js Backend &#x26; AWS Developer</strong> · Jan 2022 – July 2022</p>
+<ul>
+<li>Utilized AWS services (AppSync, AppFlow) to integrate frontend and backend functionalities, improving data retrieval efficiency by <strong>15%</strong>.</li>
+<li>Developed and optimized <strong>GraphQL API</strong> queries and REST APIs using Axios and FastAPI, tested with Swagger and Postman.</li>
+<li>Managed IAM roles for secure resource access, enhancing compliance.</li>
+</ul>
+<p><code>AWS</code> <code>GraphQL</code> <code>Node.js</code> <code>FastAPI</code> <code>Swagger</code> <code>Postman</code></p>
+<hr>
+<h3 id="lakshya-space">Lakshya Space</h3>
+<p><strong>Python &#x26; Web Developer</strong> · Mar 2021 – Jan 2022</p>
+<ul>
+<li>Mentored and supervised a team of <strong>19 interns</strong> in web development.</li>
+<li>Developed Python firmware for embedded sensor systems in resource-constrained hardware environments.</li>
+<li>Independently developed the portfolio website and supported other web development projects.</li>
+</ul>
+<hr>
+<h2 id="personal-projects">Personal Projects</h2>
+<h3 id="employee-management-system">Employee Management System</h3>
+<p><strong>AI resume parser</strong> that cuts candidate onboarding from 15 minutes to 30 seconds. Upload a CV, chat in plain English to manage records — no manual data entry required.</p>
+<p><a href="#">View on GitHub →</a></p>
+<h3 id="financial-statement-parser">Financial Statement Parser</h3>
+<p><strong>100% private, browser-based AI</strong> that transforms messy bank statement PDFs into categorized Excel reports in 10 seconds. No servers, no data leaves your device.</p>
+<p><a href="#">View on GitHub →</a></p>
+<h3 id="llm-eval-framework">LLM Eval Framework</h3>
+<p><strong>Automated quality firewall</strong> for LLM outputs that catches hallucinations and prompt regressions in 4 minutes instead of 3 days — like a compiler for AI reliability.</p>
+<p><a href="#">View on GitHub →</a></p>
+<h3 id="llm-bias-fairness-auditor">LLM Bias Fairness Auditor</h3>
+<p><strong>Regulatory-grade AI bias auditor</strong> for hiring &#x26; lending that detects discrimination in 60–120 seconds using statistical rigor, preventing compliance disasters before deployment.</p>
+<p><a href="#">View on GitHub →</a></p>
+<h3 id="prompt-regression-suite">Prompt Regression Suite</h3>
+<p><strong>CI/CD test suite for prompts</strong> — catch breaking changes before production, run like pytest but for LLM outputs, cutting API costs 50% with fail-fast execution.</p>
+<p><a href="#">View on GitHub →</a></p>
+<h3 id="blog-engine">Blog Engine</h3>
+<p>Drop Markdown files in a folder, get a <strong>fully navigable documentation site</strong> instantly. No routing config, no frontend code — just write.</p>
+<p><a href="#">View on GitHub →</a></p>
+<hr>
+<h2 id="education">Education</h2>
+<h3 id="vasavi-college-of-engineering">Vasavi College of Engineering</h3>
+<p><strong>BE — Computer Science Engineering</strong> · Hyderabad · 2021</p>
+<p>Vasavi College of Engineering, affiliated with Osmania University, Hyderabad.</p>
+<hr>
+<h2 id="extra-curricular">Extra Curricular</h2>
+<h3 id="graphic-design--gans">Graphic Design &#x26; GANs</h3>
+<ul>
+<li>Graphic Designing for Social Awareness Activities.</li>
+<li>Exploring and experimenting with <strong>Generative Adversarial Networks (GANs)</strong>.</li>
+<li>Provided mentorship &#x26; guidance to aspiring engineers, assisting with career planning and skill development.</li>
+</ul> </div> </main>  <script>
+      // Restore persisted theme & mode before first paint
+      (function () {
+        const t = localStorage.getItem('theme') || 'amber';
+        const m = localStorage.getItem('mode') || 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.setAttribute('data-mode', m);
+      })();
+    </script> </body> </html> 
